@@ -4,8 +4,10 @@ import "./index.css";
 import { Test } from "./test";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from './App2.tsx' //' 'のフォルダの関数AP2を呼び出す-☆
-import { Back } from './back.tsx';
-
+import {START} from './START.tsx';
+import { Q1 } from './Q1.tsx';
+import { Q2 } from './Q2.tsx';
+import { ANSWER } from './ANSWER.tsx';
 
 // createRoot(document.getElementById('root')!).render(
 //   <StrictMode>
@@ -17,17 +19,20 @@ import { Back } from './back.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    
+
     <BrowserRouter>{/* 同じサイトの中でボタンとかを押したときに文字を表示させるとかページ移動ではなく表示させるファイル(.tsx)を変更する */}
-      
+
       <Routes>
-        <Route path="/" element={<App />} />  
-        <Route path="/test" element={<Test />} />
-        <Route path="/back" element={<App />} />
+        <Route path="/" element={<START />} />  
+        <Route path="/Q1" element={<Q1 />} />
+        <Route path="/Q2" element={<Q2 />} />
+        <Route path="/ANSWER" element={<ANSWER />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
 )
+
+
 
 
 /*
